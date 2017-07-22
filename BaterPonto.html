@@ -45,12 +45,9 @@
 		var minEntrada =+formulario.me.value;
 		var horaSaida = +formulario.hs.value;
 		var minSaida = +formulario.ms.value;
-
 		var totalEntrada = (horaEntrada*60) + minEntrada;
 		var totalSaida = (horaSaida*60) + minSaida;
-
 		var horasTrabalhadas = (totalSaida - totalEntrada)/60 ;
-
 		formulario.total.value = horasTrabalhadas.toFixed(2);
 	}
 	</script>
