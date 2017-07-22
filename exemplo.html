@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"/>
+	<title> </title>
+	<style>
+	fieldset{
+	width:200px;
+	margin:auto;
+	}
+	a{
+	padding:7px;
+	background-color:#ccc;
+	color:#000;
+	text-decoration:none;
+	}
+	a:hover{
+	background-color:#606060;
+	box-shadow: 0  3px 0 #ccc;
+	color:#fff;
+	}
+	table{
+	margin:20px auto;
+	width:15%;
+	}
+	</style>
+</head>
+<body>
+		<form id="formulario">
+		<fieldset><legend> Horas de trabalho </legend> 
+			<p><label for="Hora entrada"> Hora entrada: &nbsp; </label><input type="text" name="he" id="he" size="9"/></p>
+			<label for="Min entrada"> min entrada:  </label><input type="text" name="me" id="me" size="9"/>
+			</p><label for="Hora saida"> Hora saida: </label><input type="text" name="hs" id="hs" size="9"/> </p>
+			</p><label for="Min saida"> Min saida: </label><input type="text" name="ms" id="ms" size="9"/> </p>
+			<p> <label for="Total"> Total: &nbsp; &nbsp;</label> <input type="text" name="total" id="total" size="9" readonly/> </p>
+			<a href="#" onclick=calcular();> calcular </a>
+		</fieldset>
+	</form>
+	<script type="text/javascript">
+	
+	
+	function calcular () {
+		var formulario = document.getElementById("formulario");
+		var horaEntrada = +formulario.he.value
+		var minEntrada =+formulario.me.value;
+		var horaSaida = +formulario.hs.value;
+		var minSaida = +formulario.ms.value;
+
+		var totalEntrada = (horaEntrada*60) + minEntrada;
+		var totalSaida = (horaSaida*60) + minSaida;
+
+		var horasTrabalhadas = (totalSaida - totalEntrada)/60 ;
+
+		formulario.total.value = horasTrabalhadas.toFixed(2);
+	}
+	</script>
+
+</body>
+</html>﻿
