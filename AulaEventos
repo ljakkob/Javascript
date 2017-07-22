@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Javascript Aula01</title>
+<style type="text/css">
+	body { background-color: #000; }
+	#xti { display:block; margin:20px auto; }
+</style>
+<script type="text/javascript">
+	
+	function troca(){
+
+		document.getElementById("xti").src="ligada.jpg";
+
+
+	}
+
+</script>
+
+
+</head>
+
+
+<body>
+
+    <p>Javascript Aula 01</p>
+
+   <img id="xti" onclick="troca();" src="desligada.jpg"/>
+   
+</body>
+
+</html>
