@@ -1,5 +1,6 @@
   fieldset{
-  width:200px;
+  width:130px;
+  height:auto;
   margin:auto;
   }
   a{
@@ -14,6 +15,6 @@
   color:#fff;
   }
   table{
-  margin:20px auto;
-  width:15%;
+  margin:20px;
+  width:70%;
   }
