@@ -11,7 +11,7 @@ function calcular () {
 		var totalEntrada = (horaEntrada*60) + minEntrada;
 		var totalSaida = (horaSaida*60) + minSaida;
 
-		var horasTrabalhadas = [(totalSaida - totalEntrada)-(alm*60)]/60;
+		var horasTrabalhadas = [(totalSaida - totalEntrada)-alm*60]/60;
          
          if(horasTrabalhadas < 8){
 
