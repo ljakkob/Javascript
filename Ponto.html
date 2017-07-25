@@ -9,17 +9,21 @@
     <script type="text/javascript" src="js/calcular.js"></script>
     <script language='javascript' src='js/clock.js'></script>
 
-					<span id='clock_tm' ></span><br><span id='clock_dt' ></span>
-				
-<script language='javascript'>
-StartClock('d/m/Y','H:i:s');
-</script>
+					
 
 
 </head>
 <body>
 		<form id="formulario">
 		<fieldset><legend> Folha de Ponto </legend> 
+		
+		<span id='clock_tm' ></span><br><span id='clock_dt' ></span>
+				
+			<script language='javascript'>
+			
+			StartClock('d/m/Y','H:i:s');
+			</script>
+			
 			<p><label for="Hora entrada"> Hora entrada: &nbsp; <input type="text" name="he" id="he" size="1"   
 			for="Min entrada"> : <input type="text" name="me" id="me" size="1"/>
 			<input type="button" id="btnEntrada" value="Bater Ponto" onclick="HoraEntrada()"/>
@@ -53,7 +57,7 @@ StartClock('d/m/Y','H:i:s');
 
 			 </p>
 
-<<<<<<< HEAD
+
 			<input type="button" id="calculaHora" value="Calcular Horas" onclick="calcular()"/>
 
 			<p> 
@@ -75,18 +79,9 @@ StartClock('d/m/Y','H:i:s');
 			</label>
 
 			 </p>
-=======
-			<input type="button" id="calculaHora" value="Calcular Horas" onclick="Calcular()"/>
 
-			<p> <label for="Total"> Total: &nbsp; &nbsp;</label> <input type="text" name="total" id="total" size="9" readonly/> </p>
-
-			<p> <label for="Debito"> Deve : &nbsp; &nbsp;</label> <input type="text" name="deve" id="deve" size="9" readonly/> </p>
-
-
-
-			<p> <label for="Credito"> Banco : &nbsp; &nbsp;</label> <input type="text" name="banco" id="banco" size="9" readonly/> </p>
->>>>>>> origin/master
 			
+
 
 			
 		</fieldset>

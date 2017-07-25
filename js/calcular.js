@@ -18,19 +18,26 @@ function calcular () {
 		var totalSaida = (horaSaida*60) + minSaida;
 		var horasTrabalhadas = totalSaida - totalEntrada;
 		var horatotal =0;
-
+		var mintotal = 0;
 
 		while (horasTrabalhadas >= 60)
 
 			{
 			horatotal=horatotal+1;
 			horasTrabalhadas=horasTrabalhadas-60;
-
+			
+			if (horasTrabalhadas < 60){
+				
+				mintotal = horasTrabalhadas;
+			
 			}
 
-		var mintotal = horasTrabalhadas;	
-
-	      
+			}
+			
+		alert(mintotal);
+		
+	    formulario.totalHora.value = horatotal;
+		formulario.totalMin.value = mintotal;
 
          if(horasTrabalhadas < 8){
 
@@ -46,7 +53,6 @@ function calcular () {
 
 
 		
-		formulario.totalHora.value = horatotal;
-		formulario.totalMin.value = mintotal;
+		
 	}
 	
