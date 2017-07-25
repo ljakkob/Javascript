@@ -1,39 +1,22 @@
-function calcular () {
-		var formulario = document.getElementById("formulario");
-		var horaEntrada = +formulario.he.value
-		var minEntrada =+formulario.me.value;
-		var horaSaida = +formulario.hs.value;
-		var minSaida = +formulario.ms.value;
-		var alm = +formulario.alm.value;
-		var deve = +formulario.deve.value;
-		var banco = +formulario.banco.value;
-		
-		formulario.he.value = dt[3];
-        formulario.me.value = dt[4];
-		
-		
-		
-		var totalEntrada = (horaEntrada*60) + minEntrada;
-		var totalSaida = (horaSaida*60) + minSaida;
-		
 
-		var horasTrabalhadas = [(totalSaida - totalEntrada)-(alm*60)]/60;
-		var resto = horasTrabalhadas % 60;
-		 
-         if(horasTrabalhadas < 8){
+function HoraEntrada(){
 
-         		formulario.deve.value = 8 - horasTrabalhadas.toFixed(2);
-         		formulario.banco.value = 0;
-         	}
-
-         if(horasTrabalhadas > 8){
-
-         		formulario.banco.value = horasTrabalhadas.toFixed(2) -8;
-         		formulario.deve.value = 0;
-         	}
+formulario.he.value = dt[3];
+formulario.me.value = dt[4];
+}
 
 
-		
-		formulario.total.value = horasTrabalhadas.toFixed(2) ;
-	}
-	
+function SaidaIntervalo(){
+formulario.saidaAlmHora.value = dt[3];
+formulario.saidaAlmMin.value = dt[4];
+}
+
+function RetornoIntervalo(){
+formulario.retornoAlmHora.value = dt[3];
+formulario.retornoAlmMin.value = dt[4];
+}
+
+function HoraSaida(){
+formulario.hs.value = dt[3];
+formulario.ms.value = dt[4];
+}
