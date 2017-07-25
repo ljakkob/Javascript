@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8"/>
+	<title> </title>
+	<link rel="stylesheet" type="text/css" href="css\ponto.css" media="all">
+    <script type="text/javascript" src="js/ponto2.js"></script>
+    <script type="text/javascript" src="js/batePonto.js"></script>
+    <script language='javascript' src='js/clock.js'></script>
+
+					<span id='clock_tm' ></span><br><span id='clock_dt' ></span>
+				
+<script language='javascript'>
+
+StartClock('d/m/Y','H:i:s');
+
+</script>
+
+
+</head>
+<body>
+		<form id="formulario">
+		<fieldset><legend> Folha de Ponto </legend> 
+			<label> 
+			<span>Entrada</span>
+ 			<input type="text" name="me" id="me" size="1" />
+			<span>:</span>
+			<input type="text" name="me" id="me" size="1" />
+			<input type="button" value="Bater Ponto" id="btnEntrada" onclick="BatePonto()"/>
+		</label>
+		
+		</p>
+		
+		<label>
+ 			<span>Almoço</span>
+ 			<input type="text" class="input_text" name="almHora" id="almHora" size="1" />
+			<span>:</span>
+			<input type="text" class="input_text" name="almMin" id="almMin" size="1" />
+			<input type="button" class="button" value="Bater Ponto" id="btnAlmoco" />
+		 </label>
+			
+		</p>	
+			
+		<label>
+ 			<span>Saída&nbsp; &nbsp</span>
+ 			<input type="text" class="input_text" name="hs" id="hs" size="1" />
+			<span>:</span>
+			<input type="text" class="input_text" name="ms" id="ms" size="1" />
+			<input type="button" class="button" value="Bater Ponto" />
+		</label>
+			
+		</p>	
+			
+		<label>
+ 			<input type="button" class="button" value="Calcular horas" align="center" onclick="Calcular()"/>
+		</label>
+		</p>	
+			
+		<label>
+ 			<span>Total</span>
+ 			<input type="text" class="input_text" name="total" id="totalHora" size="1" />
+			<span>:</span>
+			<input type="text" class="input_text" name="totalMin" id="totalMin" size="1" />
+			</label>
+			
+		</p>
+		</p>	
+			
+		<label>
+ 			<span>Débito</span>
+ 			<input type="text" class="input_text" name="deveHora" id="deveHora" size="1" />
+			<span>:</span>
+			<input type="text" class="input_text" name="deveMin" id="deveMin" size="1" />
+			</label>
+			
+		</p>	
+			
+		<label>
+ 			<span>Crédito</span>
+ 			<input type="text" class="input_text" name="bancoHora" id="bancoHora" size="1" />
+			<span>:</span>
+			<input type="text" class="input_text" name="bancoMin" id="bancoMin" size="1" />
+			</label>	
+			
+		</fieldset>
+	
+	</form>
+	
+    
+</body>
+</html>﻿

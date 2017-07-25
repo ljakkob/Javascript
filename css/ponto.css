@@ -1,20 +1,11 @@
   fieldset{
-  width:130px;
+  width:350px;
   height:auto;
   margin:auto;
+  color: white;
   }
-  a{
-  padding:7px;
-  background-color:#ccc;
-  color:#000;
-  text-decoration:none;
-  }
-  a:hover{
-  background-color:#606060;
-  box-shadow: 0  3px 0 #ccc;
-  color:#fff;
-  }
-  table{
-  margin:20px;
-  width:70%;
-  }
+
+  body { background-color: #000;}
+
+ 
+  
