@@ -1,22 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 
-function HoraEntrada(){
+<head>
+	<meta charset="utf-8"/>
+	<title> </title>
+	<link rel="stylesheet" type="text/css" href="css\ponto.css" media="all">
+    <script type="text/javascript" src="js/ponto.js"></script>
+    <script type="text/javascript" src="js/calcular.js"></script>
+    <script language='javascript' src='js/clock.js'></script>
 
-formulario.he.value = dt[3];
-formulario.me.value = dt[4];
-}
+					<span id='clock_tm' ></span><br><span id='clock_dt' ></span>
+				
+<script language='javascript'>
+StartClock('d/m/Y','H:i:s');
+</script>
 
 
-function SaidaIntervalo(){
-formulario.saidaAlmHora.value = dt[3];
-formulario.saidaAlmMin.value = dt[4];
-}
+</head>
+<body>
+		<form id="formulario">
+		<fieldset><legend> Folha de Ponto </legend> 
+			<p><label for="Hora entrada"> Hora entrada: &nbsp; <input type="text" name="he" id="he" size="1"   
+			for="Min entrada"> : <input type="text" name="me" id="me" size="1"/>
+			<input type="button" id="btnEntrada" value="Bater Ponto" onclick="HoraEntrada()"/>
+			</label>
 
-function RetornoIntervalo(){
-formulario.retornoAlmHora.value = dt[3];
-formulario.retornoAlmMin.value = dt[4];
-}
 
-function HoraSaida(){
-formulario.hs.value = dt[3];
-formulario.ms.value = dt[4];
-}
+
+			</p>
+
+			<label for="saidaAlmHora"> Saida Intervalo: &nbsp; <input type="text" name="saidaAlmHora" id="saidaAlmHora" size="1"   
+			for="saidaAlmMin"> : <input type="text" name="saidaAlmMin" id="saidaAlmMin" size="1"/>
+			<input type="button" id="btnSaidaIntervalo" value="Bater Ponto" onclick="SaidaIntervalo()"/>
+			</label>
+
+			</p>
+
+			<label for="retornoAlmHora"> Retorno Intervalo: &nbsp; <input type="text" name="retornoAlmHora" id="retornoAlmHora" size="1"   
+			for="retornoAlmMin"> : <input type="text" name="retornoAlmMin" id="retornoAlmMin" size="1"/>
+			<input type="button" id="btnRetornoIntervalo" value="Bater Ponto" onclick="RetornoIntervalo()"/>
+			</label>
+
+			</p>
+
+			</label>
+
+			<label for="Hora saida"> Hora saida: &nbsp; <input type="text" name="hs" id="hs" size="1"   
+			for="Min saida"> : <input type="text" name="ms" id="ms" size="1"/>
+			<input type="button" id="btnSaida" value="Bater Ponto" onclick="HoraSaida()"/>
+			</label>
+			 
+
+			 </p>
+
+			<input type="button" id="calculaHora" value="Calcular Horas" onclick="Calcular()"/>
+
+			<p> <label for="Total"> Total: &nbsp; &nbsp;</label> <input type="text" name="total" id="total" size="9" readonly/> </p>
+
+			<p> <label for="Debito"> Deve : &nbsp; &nbsp;</label> <input type="text" name="deve" id="deve" size="9" readonly/> </p>
+
+
+
+			<p> <label for="Credito"> Banco : &nbsp; &nbsp;</label> <input type="text" name="banco" id="banco" size="9" readonly/> </p>
+			
+
+			
+		</fieldset>
+	
+	</form>
+	
+    
+</body>
+</html>﻿
