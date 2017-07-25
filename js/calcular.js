@@ -8,22 +8,29 @@ function calcular () {
 		var retornoAlmMin = +formulario.retornoAlmMin.value;
 		var horaSaida = +formulario.hs.value;
 		var minSaida = +formulario.ms.value;
-		var deve = +formulario.deve.value;
-		var banco = +formulario.banco.value;
-		
+		var deveHora = +formulario.deveHora.value;
+		var deveMin = +formulario.deveMin.value;
+		var bancoHora = +formulario.bancoHora.value;
+		var bancoMin = +formulario.bancoMin.value;
 		
 		
 		var totalEntrada = (horaEntrada*60) + minEntrada;
 		var totalSaida = (horaSaida*60) + minSaida;
-		
+		var horasTrabalhadas = totalSaida - totalEntrada;
+		var horatotal =0;
 
 
-		var horasTrabalhadas = [(totalSaida - totalEntrada)-alm*60]/60;
-         
+		while (horasTrabalhadas >= 60)
 
-		var horasTrabalhadas = [(totalSaida - totalEntrada)-(alm*60)]/60;
-		var resto = horasTrabalhadas % 60;
-		 
+			{
+			horatotal=horatotal+1;
+			horasTrabalhadas=horasTrabalhadas-60;
+
+			}
+
+		var mintotal = horasTrabalhadas;	
+
+	      
 
          if(horasTrabalhadas < 8){
 
@@ -39,6 +46,7 @@ function calcular () {
 
 
 		
-		formulario.total.value = horasTrabalhadas.toFixed(2) ;
+		formulario.totalHora.value = horatotal;
+		formulario.totalMin.value = mintotal;
 	}
 	

@@ -51,20 +51,29 @@ StartClock('d/m/Y','H:i:s');
 			</label>
 			 
 
-
-
-
 			 </p>
 
-			<input type="button" id="calculaHora" value="Calcular Horas" onclick="Calcular()"/>
+			<input type="button" id="calculaHora" value="Calcular Horas" onclick="calcular()"/>
 
-			<p> <label for="Total"> Total: &nbsp; &nbsp;</label> <input type="text" name="total" id="total" size="9" readonly/> </p>
+			<p> 
 
-			<p> <label for="Debito"> Deve : &nbsp; &nbsp;</label> <input type="text" name="deve" id="deve" size="9" readonly/> </p>
+			<label for="totalHora"> Total: &nbsp; <input type="text" name="totalHora" id="totalHora" size="1"   
+			for="totalMin"> : <input type="text" name="totalMin" id="totalMin" size="1"/>
+			</label>
 
+			<p> 
 
+			<label for="deveHora"> Horas a Pagar: &nbsp; <input type="text" name="deveHora" id="deveHora" size="1"   
+			for="deveMin"> : <input type="text" name="deveMin" id="deveMin" size="1"/>
+			</label>
 
-			<p> <label for="Credito"> Banco : &nbsp; &nbsp;</label> <input type="text" name="banco" id="banco" size="9" readonly/> </p>
+			<p> 
+
+			<label for="bancoHora"> Horas a Receber: &nbsp; <input type="text" name="bancoHora" id="bancoHora" size="1"   
+			for="bancoMin"> : <input type="text" name="bancoMin" id="bancoMin" size="1"/>
+			</label>
+
+			 </p>
 			
 
 			
