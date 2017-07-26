@@ -19,7 +19,17 @@ function calcular () {
 		var horasTrabalhadas = totalSaida - totalEntrada;
 		var horatotal =0;
 		var mintotal = 0;
+		var horaFinal
+		var minFinal
+		if (horasTrabalhadas<60) {
+		
+		horaFinal = 0;
+		minFinal = horasTrabalhadas;
 
+        formulario.totalHora.value = 0;
+		formulario.totalMin.value = minFinal;
+
+		}	else {
 		while (horasTrabalhadas >= 60)
 
 			{
@@ -33,16 +43,25 @@ function calcular () {
 			}
 
 			}
+
+			horaFinal = horasTrabalhadas;
+			minFinal = mintotal;
+
+	   	 	formulario.totalHora.value = horaFinal;
+			formulario.totalMin.value = minFinal;
 			
-		alert(mintotal);
-		
-	    formulario.totalHora.value = horatotal;
-		formulario.totalMin.value = mintotal;
+		 }
 
-         if(horasTrabalhadas < 8){
 
-         		formulario.deve.value = 8 - horasTrabalhadas.toFixed(2);
-         		formulario.banco.value = 0;
+
+
+         if(horatotal < 8){
+
+         		formulario.deveHora.value = 8 - horaFinal;
+         		formulario.deveMin.value = minFinal;
+         		formulario.bancoHora.value = 0;
+         		formulario.bancoMin.value = 0;
+         	}
          	}
 
          if(horasTrabalhadas > 8){
