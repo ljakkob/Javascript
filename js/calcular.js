@@ -16,11 +16,14 @@ function calcular () {
 		
 		var totalEntrada = (horaEntrada*60) + minEntrada;
 		var totalSaida = (horaSaida*60) + minSaida;
-		var horasTrabalhadas = totalSaida - totalEntrada;
+		var totalAlmoco = [(retornoAlmHora*60) + retornoAlmMin] - [(saidaAlmHora*60) + saidaAlmMin ];
+		var horasTrabalhadas = totalSaida - (totalEntrada + totalAlmoco);
 		var horatotal =0;
 		var mintotal = 0;
 		var horaFinal=0;
 		var minFinal=0;
+
+		    alert(totalAlmoco);
 		
 			
 				if (horasTrabalhadas<60) {
@@ -32,11 +35,14 @@ function calcular () {
 					formulario.totalMin.value = minFinal;
 					
 				}	
+
+				else
+
+				{
 			
-		 
-		
+		 			alert(horasTrabalhadas);
 			
-					/*while (horasTrabalhadas>=60){
+					while (horasTrabalhadas>=60){
 					horaFinal=horaFinal+1;
 					horasTrabalhadas=horasTrabalhadas-60;
 					}
@@ -45,9 +51,9 @@ function calcular () {
 			
 					formulario.totalHora.value = horaFinal;
 					formulario.totalMin.value = minFinal;
+				}
 					
-					
-					if(horatotal < 8){
+					/*if(horatotal < 8){
 
 					formulario.deveHora.value = 8 - horaFinal;
 					formulario.deveMin.value = minFinal;
