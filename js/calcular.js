@@ -36,16 +36,37 @@ function calcular () {
 		 
 		
 			
-			/*while (horasTrabalhadas>=60){
-			horaFinal=horaFinal+1;
-			horasTrabalhadas=horasTrabalhadas-60;
-			}
+					/*while (horasTrabalhadas>=60){
+					horaFinal=horaFinal+1;
+					horasTrabalhadas=horasTrabalhadas-60;
+					}
 			
-			minFinal = horasTrabalhadas;
+					minFinal = horasTrabalhadas;
 			
-			formulario.totalHora.value = horaFinal;
-			formulario.totalMin.value = minFinal;
-			*/
+					formulario.totalHora.value = horaFinal;
+					formulario.totalMin.value = minFinal;
+					
+					
+					if(horatotal < 8){
+
+					formulario.deveHora.value = 8 - horaFinal;
+					formulario.deveMin.value = minFinal;
+					formulario.bancoHora.value = 0;
+					formulario.bancoMin.value = 0;
+         	    }
+			
+			
+         	}
+
+				if(horasTrabalhadas > 8){
+
+					formulario.banco.value = horasTrabalhadas.toFixed(2) -8;
+					formulario.deve.value = 0;
+				}
+
+					
+					
+					*/
 			   
 		
 			 
