@@ -23,8 +23,7 @@ function calcular () {
 		var horaFinal=0;
 		var minFinal=0;
 
-		    alert(totalAlmoco);
-		
+		    
 			
 				if (horasTrabalhadas<60) {
 		
@@ -36,15 +35,14 @@ function calcular () {
 					
 				}	
 
-				else
-
-				{
+					else
+				   {
 			
-		 			alert(horasTrabalhadas);
+		 				
 			
-					while (horasTrabalhadas>=60){
-					horaFinal=horaFinal+1;
-					horasTrabalhadas=horasTrabalhadas-60;
+							while (horasTrabalhadas>=60){
+							horaFinal=horaFinal+1;
+							horasTrabalhadas=horasTrabalhadas-60;
 					}
 			
 					minFinal = horasTrabalhadas;
@@ -53,29 +51,92 @@ function calcular () {
 					formulario.totalMin.value = minFinal;
 				}
 					
-					/*if(horatotal < 8){
 
-					formulario.deveHora.value = 8 - horaFinal;
-					formulario.deveMin.value = minFinal;
-					formulario.bancoHora.value = 0;
-					formulario.bancoMin.value = 0;
-         	    }
-			
-			
-         	}
+                     /*Calculando o banco de horas*/
 
-				if(horasTrabalhadas > 8){
+					if(horaFinal < 8)
+
+					{
+
+						formulario.deveHora.value = 8 - horaFinal;
+
+
+						if (minFinal ==0) { formulario.deveMin.value = 0;}
+						else{
+
+							 formulario.deveMin.value = 60-minFinal;
+						} 
+						
+						formulario.bancoHora.value = 0;
+						formulario.bancoMin.value = 0;
+
+
+						
+					}	
+				   
+
+				    if (horaFinal > 8)
+
+					{
+
+						formulario.bancoHora.value= horaFinal -8;
+
+
+						if (bancoMin ==0) { formulario.bancoMin.value = 0;}
+						else{
+
+							 formulario.bancoMin.value = 60-minFinal;
+						} 
+						
+					    formulario.deveHora.value = 0;
+						formulario.deveMin.value = 0;
+						
+					}
+
+
+				    if (horaFinal == 8){
+
+				    	formulario.deveHora.value = 0;
+						formulario.deveMin.value = 0;
+						formulario.bancoHora.value = 0;
+						formulario.bancoMin.value = 0;
+
+				    }
+
+}
+
+
+
+						/*if (minFinal = 0)
+						{
+
+						     alert("entrou no if!!!");
+							formulario.deveMin.value = 0;
+						}
+
+						/
+						else{
+
+							formulario.deveMin.value = 60-minFinal;
+						}
+
+						formulario.bancoHora.value = 0;
+						formulario.bancoMin.value = 0;*/
+         	        
+			
+			  
+			        
+
+				/*if(horasTrabalhadas > 8){
 
 					formulario.banco.value = horasTrabalhadas.toFixed(2) -8;
 					formulario.deve.value = 0;
-				}
+				}*/
 
 					
 					
-					*/
 			   
 		
 			 
-		
-	}
+
 	

@@ -20,3 +20,4 @@ function HoraSaida(){
 formulario.hs.value = dt[3];
 formulario.ms.value = dt[4];
 }
+
