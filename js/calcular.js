@@ -82,9 +82,10 @@ function calcular () {
 						formulario.bancoHora.value= horaFinal -8;
 
 
-						if (bancoMin ==0) { formulario.bancoMin.value = 0;}
+						if (minFinal ==0) { formulario.bancoMin.value = 0;}
 						else{
 
+						
 							 formulario.bancoMin.value = 60-minFinal;
 						} 
 						
